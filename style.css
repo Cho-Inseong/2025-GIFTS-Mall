@@ -292,3 +292,175 @@ header ul li a:hover {
     width: 10px;
     height: 10px;
 }
+/* 공지사항 */
+#ac {
+    width: 100%;
+}
+
+#ac_title {
+    font-size: 90px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+}
+
+#ac_table { 
+    width: 100%;
+    border-top: 1px solid #007BFF;
+    border-collapse: collapse;
+}
+
+#ac_table th, td {
+    border-bottom: 1px solid #007BFF;
+    padding: 10px;
+}
+
+#ac_link {
+    display: flex;
+    justify-content: center;
+}
+
+#ac_link button {
+    border: 0;
+    background: transparent;
+    color: #969799;
+    margin: 10px;
+    font-size: 20px;
+}
+
+#ac_link button:hover {
+    color: black;
+}
+
+/* 상품입고/제휴문의 */
+#sj {
+    margin-top: 40px;
+}
+
+#sj_title {
+    text-align: center;
+}
+
+#sj_title_1 {
+    font-size: 30px;
+    font-weight: 900;
+}
+#sj_title_2 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#banner {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.symbol-pic {
+    width: 200px;
+    height: 200px;
+    background-color: #007BFF;
+    border-radius: 20px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+.symbol-pic img {
+    width: 100%;
+    height: 150px;
+}
+
+.symbol-pic span {
+    color: white;
+}
+
+/* 입점절차 안내 */
+#sep {
+    margin-top: 40px;
+}
+
+#sep_title {
+    font-size: 40px;
+}
+
+#sep_step_area {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sep_step_circle {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #007BFF ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sep_step_inline {
+    display: inline-block;
+}
+
+.sep_step1 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.sep_dd {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+.sep_dd_shadow {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: #dedee2;
+}
+
+.sep_dd_title {
+    width: 20%;
+    margin-left: 20px;
+}
+
+.sep_dd_step1 {
+    font-size: 20px;
+}
+
+.sep_dd_detail {
+    width: 80%;
+}
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 500px;
+    background-color: #007BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer_session_1 {
+    display: inline-block;
+    margin-right: 100px;
+}
+
+.footer_img {
+    width: 35px;
+    margin-right: 5px;
+    margin-top: 5px;
+    filter: grayscale();
+    border-radius: 50%;
+}
+
+.footer_img:hover {
+    width: 35px;
+    margin-right: 5px;
+    filter: grayscale(0);
+    border-radius: 50%;
+}

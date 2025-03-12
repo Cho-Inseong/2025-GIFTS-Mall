@@ -10,24 +10,25 @@
 
 <body>
     <!-- 로딩화면 -->
-    <div class="loading_screen">
+    <!-- <div class="loading_screen">
         <div class="loader"></div>
-    </div>
+    </div> -->
     <!-- 헤더 -->
     <header>
         <div id="header_logo_and_nav">
             <img id="header_logo" src="./logo.png" alt="logo" title="logo">
             <ul>
                 <!-- 메뉴 내비게이션 남음 -->
-                <li><a href="#">메인메뉴</a></li>
-                <li><a href="#">서브메뉴</a></li>
+                <li><a href="#">소개</a></li>
                 <li><a href="#">판매상품</a></li>
+                <li><a href="#">가맹점</a></li>
+                <li><a href="#">장바구니</a></li>
             </ul>
         </div>
         <ul>
             <li><a href="#">로그인</a></li>
+            <li><a href="#">관리자</a></li>
             <li><a href="#">회원가입</a></li>
-            <li><a href="#">장바구니</a></li>
         </ul>
     </header>
     <main>
@@ -482,11 +483,235 @@
                 </div>
             </div>
             <!-- 공지사항 -->
-            <div id="announcement">
-
+            <div id="ac">
+                <span id="ac_title">공지사항</span>
+                <div id="ac_link">
+                    <button> < </button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>></button>
+                </div>
+                <table id="ac_table">
+                    <tr>
+                        <td>유형</td>
+                        <td>제목</td>
+                        <td>공지일자</td>
+                    </tr>
+                    <tr>
+                        <td>이벤트</td>
+                        <td>24년 7월 <헬스+출석체크인> 이벤트 당첨자 공지</td>
+                        <td>2024.08.08</td>
+                    </tr>
+                    <tr>
+                        <td>이벤트</td>
+                        <td>7월 [기프트몰TV 보러갈래?] 이벤트 당첨자 발표</td>
+                        <td>2024.08.07</td>
+                    </tr>
+                    <tr>
+                        <td>일반</td>
+                        <td>[배송안내] 8/14(수)~8/15(목) 택배사 휴무 관련</td>
+                        <td>2024.08.06</td>
+                    </tr>
+                    <tr>
+                        <td>일반</td>
+                        <td>딘토 이벤트 조기 종료 안내 </td>
+                        <td>2024.08.05</td>
+                    </tr>
+                    <tr>
+                        <td>일반</td>
+                        <td>하월곡점 폐점으로 인한 영업종료 안내</td>
+                        <td>2024.07.31</td>
+                    </tr>
+                    <tr>
+                        <td>일반</td>
+                        <td>양평점 리로케이션으로 인한 영업 중단 안내</td>
+                        <td>2024.07.31</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 상품입점/제휴문의  -->
+            <div id="sj">
+                <!-- 배너 -->
+                <div id="sj_title">
+                    <span id="sj_title_1">대한민국 No.1</span>
+                    <span id="sj_title_2">GIFTS:MALL과 함께 할 WIN-WIn 파트너를 찾습니다.</span>
+                    <p id="sj_title_2">제후사의 많은 지원을 기다립니다.</p>
+                </div>
+                <div id="banner">
+                    <div class="symbol-pic">
+                        <img src="./img/대타.png" alt="대타" title="대타">
+                        <span>상품입점/제휴문의</span>
+                    </div>
+                    <div class="symbol-pic">
+                        <img src="./img/대타.png" alt="대타" title="대타">
+                        <span>문의결과조회</span>
+                    </div>
+                    <div class="symbol-pic">
+                        <img src="./img/대타.png" alt="대타" title="대타">
+                        <span>전자계약시스템</span>
+                    </div>
+                    <div class="symbol-pic">
+                        <img src="./img/대타.png" alt="대타" title="대타">
+                        <span>파트너시스템</span>
+                    </div>
+                </div>
+                <!-- 입점절차 안내 -->
+                <div id="sep">
+                    <span id="sep_title">입점절차</span>
+                    <div id="sep_step_area">
+                        <div class="sep_step_circle">
+                            <div class="sep_step_inline">
+                                <p class="sep_step1">Step.1</p>
+                                <p>임시회원가입</p>
+                            </div>
+                        </div>
+                        <div class="sep_step_circle">
+                            <div class="sep_step_inline">
+                                <p class="sep_step1">Step.2</p>
+                                <p>온라인상담</p>
+                            </div>
+                        </div>
+                        <div class="sep_step_circle">
+                            <div class="sep_step_inline">
+                                <p class="sep_step1">Step.3</p>
+                                <p>방문상담</p>
+                            </div>
+                        </div>
+                        <div class="sep_step_circle">
+                            <div class="sep_step_inline">
+                                <p class="sep_step1">Step.4</p>
+                                <p>품평회회</p>
+                            </div>
+                        </div>
+                        <div class="sep_step_circle">
+                            <div class="sep_step_inline">
+                                <p class="sep_step1">Step.5</p>
+                                <p>신용평가</p>
+                            </div>
+                        </div>
+                        <div class="sep_step_circle">
+                            <div class="sep_step_inline">
+                                <p class="sep_step1">Step.6</p>
+                                <p>계약체결</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border: 2px solid #007BFF;">
+                    <div id="sep_step_detail">
+                        <div class="sep_dd">
+                            <div class="sep_dd_title">
+                                <p class="sep_dd_step1">Step.1</p>
+                                <p>임시회원가입</p>
+                            </div>
+                            <div class="sep_dd_detail">
+                                <span>
+                                    미거래 업체는 임시회원 가입/로그인 후 상담신청을 하실 수 있습니다.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sep_dd_shadow">
+                            <div class="sep_dd_title">
+                                <p class="sep_dd_step1">Step.2</p>
+                                <p>온라인상담</p>
+                            </div>
+                            <div class="sep_dd_detail">
+                                <span>
+                                    GIFTS:Mall 입점/제휴를 위해서는 온라인 상담이 선행되어야 합니다. 상담 문의 후 사이트를 통해 결과를 안내해 드립니다.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sep_dd">
+                            <div class="sep_dd_title">
+                                <p class="sep_dd_step1">Step.3</p>
+                                <p>방문상담</p>
+                            </div>
+                            <div class="sep_dd_detail">
+                                <span>
+                                    온라인 상담이 긍정적일 경우, 담당MD/제휴담당자와 구체적인 상담을 진행하게 됩니다.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sep_dd_shadow">
+                            <div class="sep_dd_title">
+                                <p class="sep_dd_step1">Step.4</p>
+                                <p>품평회</p>
+                            </div>
+                            <div class="sep_dd_detail">
+                                <span>
+                                    공정한 평가를 위해 상품력, 기획력, 영업력, 판촉력 등의 항목을 기준으로 내부 품평회를 진행합니다.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sep_dd">
+                            <div class="sep_dd_title">
+                                <p class="sep_dd_step1">Step.5</p>
+                                <p>신용평가</p>
+                            </div>
+                            <div class="sep_dd_detail">
+                                <span>
+                                    입점확정 협력사의 경우 신뢰있는 거래를 위해 신용평가를 받고 있습니다.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sep_dd_shadow">
+                            <div class="sep_dd_title">
+                                <p class="sep_dd_step1">Step.6</p>
+                                <p>계약체결</p>
+                            </div>
+                            <div class="sep_dd_detail">
+                                <span>
+                                    전자계약서(또는 수기계약서)를 통해 거래계약서와 관련서류를 작성하시면 입점절차가 완료됩니다.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div id="footer_session_1">
+            <span>
+                (주)GIFTS:Mall | 사업자등록번호 : 809-81-01157 | 대표이사 황기영<br>
+                주소 : 서울특별시 용산구 한강대로 123, 40층<br>
+                본사 대표전화 : 02-123-4567 | GIFTS:Mall 가맹상담전화 : 02-123-4568 <br>
+                COPYRIGHTⓒ 2024 GIFTS:MALL KOREA INC. ALL RIGHTS RESERVED <br>
+            </span>
+            <div>
+                <img class="footer_img" src="./img/sns1.png" alt="sns1" title="sns1">
+                <img class="footer_img" src="./img/sns2.png" alt="sns2" title="sns2">
+                <img class="footer_img" src="./img/sns3.png" alt="sns3" title="sns3">
+                <img class="footer_img" src="./img/sns4.png" alt="sns4" title="sns4">
+                <img class="footer_img" src="./img/sns5.png" alt="sns5" title="sns5">
+            </div>
+            <div>
+                <span>
+                    개인정보처리방침 | 이용약관.법적고지 | 청소년보호방침 | 이메일무단수집거부 | 사이트맵 | 채용
+                </span>
+            </div>
+        </div>
+        <div>
+            <span>
+                고객센터 이용안내<br>
+                - 온라인몰 고객센터 1580-8282<br>
+                - 매장고객센터 1577-8254<br>
+                <br>
+                고객센터 운영시간 [평일 09:00 - 18:00]<br>
+                <br>
+                주말 및 공휴일은 1:1문의하기를 이용해주세요.<br>
+                업무가 시작되면 바로 처리해드립니다.<br>
+                <br>
+                지방은행구매안전서비스<br>
+                GIFTS:Mall은 현금 결제한 금액에 대해 지방은행과<br>
+                채무지급보증 계약을체결하여 안전한 거래를 보장하고 있습니다<br>
+                서비스 가입사실 확인 ><br>
+            </span>
+        </div>
+    </footer>
 </body>
 
 </html>
