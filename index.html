@@ -14,21 +14,33 @@
         <div class="loader"></div>
     </div> -->
     <!-- 헤더 -->
+     <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+     </ul>
     <header>
         <div id="header_logo_and_nav">
             <img id="header_logo" src="./logo.png" alt="logo" title="logo">
             <ul>
-                <!-- 메뉴 내비게이션 남음 -->
-                <li><a href="#">소개</a></li>
-                <li><a href="#">판매상품</a></li>
+                <li><a href="./page/introduce.html">소개</a></li>
+                <ul class="menu">
+                    <li>
+                        <a href="./page/all_products.html">판매상품</a>
+                        <ul class="depth_1">
+                          <li><a href="./page/all_products.html">전체상품</a></li>
+                          <li><a href="./page/popular.html">인기상품</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <li><a href="#">가맹점</a></li>
-                <li><a href="#">장바구니</a></li>
+                <li><a href="./page/shopping_cart.html">장바구니</a></li>
             </ul>
         </div>
         <ul>
             <li><a href="#">로그인</a></li>
-            <li><a href="#">관리자</a></li>
             <li><a href="#">회원가입</a></li>
+            <li><a href="#">관리자</a></li>
         </ul>
     </header>
     <main>
@@ -715,3 +727,4 @@
 </body>
 
 </html>
+<!-- <img src="./[2025년 지방] 웹디자인및개발 (과제)/선수제공파일/A-Module/products_data.json" alt=""> -->

@@ -16,11 +16,16 @@ ul {
 
 /* 로딩 페이지 */
 .loading_screen {
-    position: fixed;   /* 로딩페이지 고정시키기 어디 못도망가게 */
-    top: 0; /* position: fixed할때 어디 튀어나가지 말라고 하는거 */
-    left: 0; /* 위랑같음 */
-    width: 100%; /* 로딩페이지는 전체화면 */
-    height: 100%; /* 위랑같음 */
+    position: fixed;
+    /* 로딩페이지 고정시키기 어디 못도망가게 */
+    top: 0;
+    /* position: fixed할때 어디 튀어나가지 말라고 하는거 */
+    left: 0;
+    /* 위랑같음 */
+    width: 100%;
+    /* 로딩페이지는 전체화면 */
+    height: 100%;
+    /* 위랑같음 */
     background-color: white;
     display: flex;
     align-items: center;
@@ -32,11 +37,13 @@ ul {
 
 @keyframes fadeOUT {
     0% {
-        opacity: 1; visibility: visible;
+        opacity: 1;
+        visibility: visible;
     }
 
     100% {
-        opacity: 0; visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
@@ -73,7 +80,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    z-index: 1;
+    z-index: 100;
     position: fixed;
     top: 0;
     left: 0;
@@ -98,10 +105,10 @@ header ul li a {
     display: inline-block;
 }
 
-header ul li a:hover {
+/* header ul li a:hover {
     transform: scale(1.4);
     font-weight: 900;
-}
+} */
 
 /* 슬라이더  */
 .section {
@@ -122,7 +129,7 @@ header ul li a:hover {
 .section .slidelist {
     white-space: nowrap;
     font-size: 0;
-    display: flex; 
+    display: flex;
     width: 300%;
 }
 
@@ -176,7 +183,8 @@ header ul li a:hover {
 
 
 .slidelist:hover .slide {
-    animation-play-state: paused; /* 슬라이더 영역에 마우스를 올리면 애니메이션 멈춤 */
+    animation-play-state: paused;
+    /* 슬라이더 영역에 마우스를 올리면 애니메이션 멈춤 */
 }
 
 .slide {
@@ -186,9 +194,11 @@ header ul li a:hover {
 .slide_area1 {
     animation-delay: 0s;
 }
+
 .slide_area2 {
     animation-delay: -3s;
 }
+
 .slide_area3 {
     animation-delay: -6s;
 }
@@ -228,7 +238,7 @@ header ul li a:hover {
 #container {
     width: 1350px;
     margin: 0 auto;
-    
+
 }
 
 /* 판매상품 */
@@ -255,7 +265,7 @@ header ul li a:hover {
 .sp_contents {
     width: 350px;
     height: 600px;
-    border: solid 2px #007BFF;
+    border: solid 1px #007BFF;
     border-radius: 10px;
 }
 
@@ -292,6 +302,7 @@ header ul li a:hover {
     width: 10px;
     height: 10px;
 }
+
 /* 공지사항 */
 #ac {
     width: 100%;
@@ -304,13 +315,14 @@ header ul li a:hover {
     justify-content: center;
 }
 
-#ac_table { 
+#ac_table {
     width: 100%;
     border-top: 1px solid #007BFF;
     border-collapse: collapse;
 }
 
-#ac_table th, td {
+#ac_table th,
+#ac_table td {
     border-bottom: 1px solid #007BFF;
     padding: 10px;
 }
@@ -345,6 +357,7 @@ header ul li a:hover {
     font-size: 30px;
     font-weight: 900;
 }
+
 #sj_title_2 {
     font-size: 20px;
     font-weight: 900;
@@ -392,7 +405,7 @@ header ul li a:hover {
 .sep_step_circle {
     width: 200px;
     height: 200px;
-    border: 3px solid #007BFF ;
+    border: 3px solid #007BFF;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -415,6 +428,7 @@ header ul li a:hover {
     display: flex;
     align-items: center;
 }
+
 .sep_dd_shadow {
     width: 100%;
     height: 150px;
@@ -435,6 +449,7 @@ header ul li a:hover {
 .sep_dd_detail {
     width: 80%;
 }
+
 /* 푸터 */
 footer {
     width: 100%;
@@ -463,4 +478,238 @@ footer {
     margin-right: 5px;
     filter: grayscale(0);
     border-radius: 50%;
+}
+
+
+/* 메뉴 내비게이션 */
+.menu {
+    margin-right: 15px;
+}
+
+.menu:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.menu>li {
+    position: relative;
+    float: left;
+    margin-right: 5px;
+}
+
+.menu>li>a {
+    display: block;
+    color: #fff;
+}
+
+.menu>li:hover .depth_1 {
+    display: block;
+}
+
+.menu .depth_1 {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.menu .depth_1 a {
+    display: block;
+    width: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #818181;
+    color: #fff;
+}
+
+.menu .depth_1 a:hover {
+    background: #007BFF;
+}
+
+/* 소개 페이지 */
+#id_w_img {
+    width: 100%;
+    height: 500px;
+    background-size: 100% 100%;
+    background-image: url(./img/10.JPG);
+    filter: brightness(50%);
+    position: relative;
+}
+
+#id_img_text {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    width: 80%;
+}
+
+#id_text_box {
+    display: inline-block;
+}
+
+.id_text_1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.id_text_2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #dbd4d4;
+}
+
+#id_ct_box {
+    width: 100%;
+}
+
+.id_ct_parts {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.id_ct_parts_text {
+    width: 50%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.id_ct_parts_text p {
+    margin-bottom: 20px;
+}
+
+.id_ct_parts_text_inline {
+    display: inline-block;
+}
+
+.id_ct_parts_img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.id_ct_parts_img img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 전체상품 */
+#container_ap {
+    width: 1350px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+#ap_pp {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #007BFF;
+    border-radius: 20px;
+    display: flex;
+}
+
+#ap_pp_img {
+    width: 40%;
+    height: 100%;
+}
+
+#ap_pp_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+
+#ap_pp_text {
+    width: 60%;
+    height: 100%;
+    /* margin-top: 100px   ; */
+}
+
+#ap_pp_line {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#ap_pp_title {
+    font-size: 30px;
+    font-weight: 900;
+    margin-right: 30px;
+}
+
+/* 장바구니 */
+#sc_tb {
+    border-collapse: collapse;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.sc_tb_title td {
+    border-top: 3px solid #007BFF;
+    border-bottom: 1px solid #007BFF;
+    text-align: center;
+    padding: 5px;
+}
+
+.sc_tb_title_br {
+    border-right: 1px solid #007BFF;
+}
+
+.sc_tb_detail {
+    text-align: center;
+}
+
+.sc_tb_detail {
+    border-bottom: 1px solid #007BFF;
+}
+
+.sc_img {
+    width: 190px;
+    height: 108px;
+}
+
+#sc_btn_group {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+/* b모듈 모토 만들기 */
+.motto-parts {
+    width: 250px;
+    height: 700px;
+    /* 5개 div에 나눠서 배치 */
+    background-size: 1250px auto; 
+    /* transition: background-position 0.3s ease-in-out; */
+    overflow: hidden;
+}
+
+/* b모듈 동영상 컨트롤러 */
+.btn-group {
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/* b모듈 비회원 주문하기 */
+/* 모달 부분 */
+.modal-fullSize{
+    width: 1000px;
+    height: 600px;
 }
