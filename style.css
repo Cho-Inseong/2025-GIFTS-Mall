@@ -14,6 +14,10 @@ ul {
     display: flex;
 }
 
+p {
+    margin: 0px;
+}
+
 /* 로딩 페이지 */
 .loading_screen {
     position: fixed;
@@ -712,4 +716,37 @@ footer {
 .modal-fullSize{
     width: 1000px;
     height: 600px;
+}
+
+/* c모듈 정체상품 수정하는 */
+.box {
+    width: 24%;
+    height: 450px;
+}
+
+.box img {
+    width: 100%;
+    height: 337.5px;
+}
+
+.popular {
+    width: 100%;
+    height: 520px;
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+}
+
+.popular img {
+    width: 68%;
+    height: 100%;
+}
+
+.p-box {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    /* 세로정렬 */
+    justify-content: center;
+    align-items: center;
 }

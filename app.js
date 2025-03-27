@@ -152,10 +152,185 @@ function products_data() {
 function show_all_products() {
   products_data().then(function (products_data) {
     // 여기 안에서 짝짝쿵쿵쿵 ㅇㅋ?
-    
-  })
+  });
 }
 
 // 비회우너 주문하기 말고 c먼저
 
 // 비회원 주문하기 끝
+
+// C모듈
+
+// 회원가입
+function show_sign_up_modal() {
+  $("#sign_up_modal").modal("show");
+}
+
+function sign_up() {
+  const user_id = $("#user_id").val();
+  const user_pw = $("#user_pw").val();
+  const user_name = $("#user_name").val();
+  const user_email = $("#user_email").val();
+
+  $.post("./sign_up", {
+    user_id: user_id,
+    user_pw: user_pw,
+    user_name: user_name,
+    user_email: user_email,
+  }).done(function (data) {
+    if (typeof data == "string") {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {
+        alert("서버 응답 오류: JSON변환 실패");
+        console.error("JSON Parse Error", e, data);
+        return;
+      }
+    }
+
+    if (data.success) {
+      alert(data.message);
+      location.href = "./";
+    } else {
+      alert(data.message);
+      console.log(data.error);
+      location.reload();
+    }
+  });
+}
+
+// 로그인
+function show_sign_in_modal() {
+  $("#sign_in_modal").modal("show");
+}
+
+function sign_in() {
+  const user_id = $("#user_id_in").val();
+  const user_pw = $("#user_pw_in").val();
+
+  $.post("./sign_in", {
+    user_id: user_id,
+    user_pw: user_pw,
+  }).done(function (data) {
+    if (typeof data == "string") {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {
+        alert("JSON객체 변환 실패 엣큥");
+        console.error("JSON Parse Error", e, data);
+        return;
+      }
+    }
+
+    if (data.success) {
+      alert(data.message);
+      location.reload();
+    } else {
+      alert(data.message);
+      console.log(data.error);
+      location.reload();
+    }
+  });
+}
+
+// 전체상품 페이지에 로드하기
+function category_select(elem) {
+  const elem_text = $(elem).text(); // 버튼의 텍스트(카테고리명) 가져오기
+
+  $.post(
+    "./all_products_add_api",
+    { category: elem_text },
+    function (response) {
+      const data = JSON.parse(response); // 서버에서 받은 JSON 데이터 파싱
+
+      // 인기 상품은 .popular div에 출력
+      $(".popular").html(data.popular);
+
+      // 일반 상품은 #detail_boxes div에 출력
+      $("#detail_boxes").html(data.normal);
+    }
+  ).fail(function () {
+    console.error("카테고리 데이터를 불러오는 데 실패했습니다.");
+  });
+}
+
+//장바구니 추가
+function s_p_c_a(elem) {
+  const goods_idx = elem;
+
+  $.post("./add_shopping_cart_api", {
+    goods_idx: goods_idx,
+  }).done(function (data) {
+    if (typeof data == "string") {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {
+        alert("JSON객체 변환 실패");
+        console.error("JSON Parse Error", e, data);
+        return;
+      }
+    }
+    if (data.success) {
+      alert(data.message);
+      // location.reload();
+    } else {
+      alert(data.message);
+      console.log(data.error);
+      location.reload();
+    }
+  });
+}
+
+// 장바구니
+// function total_price() {
+//   const goods_price = $(".goods_price").attr("id")
+//   const stock = $(".goods_stock").val();
+
+//   let total_price = goods_price * stock
+
+//   $(".total_price").text(total_price)
+
+// console.log(stock);
+// }
+
+function total_price(el) {
+  const row = $(el).closest("tr"); // 현재 행 선택
+  const goods_idx = row.attr("id");
+  const goods_price = parseInt(row.find(".goods_price").attr("id")); // 해당 행의 가격 가져오기
+  const stock = parseInt(row.find(".goods_stock").val()) || 0; // 수량이 없을 경우 0 처리
+
+  let total_price = goods_price * stock;
+  row.find(".total_price").text(total_price.toLocaleString() + "원"); // 형식 적용
+
+  let total_total_price = 0;
+  
+  $(".total_price").each(function () {
+      let price = parseInt($(this).text().replace(/[^0-9]/g, "")) || 0; // "1,000원" -> 1000 변환
+      total_total_price += price;
+  });
+
+  $(".total_total_price").text(`총금액: ${total_total_price.toLocaleString()}원`);
+
+  $.post("./stock_update_api", {
+    spc_stock: stock,
+    goods_idx: goods_idx,
+  }).done(function (data) {
+    if (typeof data == "string") {
+      try {
+        data = JSON.parse(data);
+      } catch (e) {
+        alert("JSON객체 변환 실패");
+        console.error("JSON Parse Error", e, data)
+        return
+      }
+    }
+
+    if (data.success) {
+      console.log(data.message);
+    } else {
+      console.log(data.message);
+      console.error(data.error);
+      location.reload();
+    }
+  });
+}

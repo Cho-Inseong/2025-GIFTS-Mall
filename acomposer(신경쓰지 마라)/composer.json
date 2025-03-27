@@ -1,0 +1,17 @@
+{
+    "name": "inseong/2025-gifts-mall",
+    "autoload": {
+        "psr-4": {
+            "Inseong\\2025GiftsMall\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "choinseong",
+            "email": "choinseong2237@gmail.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^4.1"
+    }
+}
